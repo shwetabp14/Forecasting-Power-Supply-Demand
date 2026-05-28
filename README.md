@@ -42,7 +42,7 @@ PJM operates a competitive wholesale electricity market and manages the high-vol
 2. **Preprocessing** — Handle missing values, parse timestamps, engineer time-based features (hour, day of week, month, season)
 3. **Exploratory Data Analysis (EDA)** — Visualize demand patterns across hours, days, and seasons
 4. **Feature Engineering** — Create lag features and rolling statistics for time-series modeling
-5. **Model Training** — Train forecasting models (e.g., XGBoost, LSTM, ARIMA, or similar)
+5. **Model Training** — Train the TBATS model to handle multiple seasonalities (hourly, daily, weekly)
 6. **Evaluation** — Assess performance using metrics such as MAE, RMSE, and MAPE
 7. **Visualization** — Plot predicted vs. actual demand over time
 
@@ -57,7 +57,7 @@ PJM operates a competitive wholesale electricity market and manages the high-vol
 | NumPy | Numerical computations |
 | Matplotlib / Seaborn | Data visualization |
 | Scikit-learn | Machine learning models and metrics |
-| XGBoost / LSTM | Forecasting models |
+| TBATS | Forecasting model (Exponential Smoothing + ARMA + Trigonometric seasonality) |
 | Jupyter Notebook | Interactive analysis environment |
 | OpenPyXL | Reading Excel (.xlsx) data files |
 
@@ -109,3 +109,6 @@ The model forecasts hourly MW power demand and is evaluated on held-out test dat
 ## 👤 Author
 
 **Shweta Patil** ([@shwetabp14](https://github.com/shwetabp14))
+
+
+
